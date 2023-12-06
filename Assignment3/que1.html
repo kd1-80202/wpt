@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration</title>
+
+    <style>
+               body {
+            font-family: Arial, sans-serif;
+            margin-left: 500px;
+            flex-direction: column;
+            height: 100px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px ;
+            background-color: white;
+            color: black;
+        }
+
+        header h1 {
+            margin-right: 500px ;
+            text-decoration: underline;
+        }
+
+        
+
+      
+        .container {
+            align-items: center;
+            display: flex;
+            width: 100%;
+            max-width: 800px;
+            background-color: peachpuff;
+            border-radius: 8px;
+            box-shadow:  10px black;
+        }
+
+        .video {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .form {
+            flex: 1;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            
+        }
+
+        td {
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header><h1><u>Registration Form</u></h1>
+    </header>
+    <div class="container">
+        <div class="video"></div>
+        <iframe  width="500" height="280"  src="https://www.youtube.com/embed/4Onvb4MQLfg"  
+        title="How to Host Multiple WordPress Websites on a Linux VPS 🔥" frameborder="0"
+        allow="accelerometer ; autoplay; clipboard-write; encrypted-media,picture in picture ;web-share" allowfullscreen></iframe>
+        <div class="form">
+            <form action="server.jsp"  method="post">
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" required="required" name="MyName"  placeholder="Name"  >*</td>
+                    </tr>
+                    <tr>
+                        <td>BirthDate:</td>
+                        <td><input type="data"  name="myDOB" required="required" placeholder="08/07/2010">*</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>
+                            <input type="Email" name="MyEmail"  placeholder="abc@gmail.com" pattern="^[a-z A-Z 0-9  +_.-]+@[a-z A-Z 0-9]+$" ></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="password" placeholder="**********" pattern="^[a-z A-Z 0-9 !@#$%^&*-_=+]{8,12}$/g"></td>
+                    </tr>
+                   </table>
+                    <table>
+                    <tr>
+                        <td>Address</td>
+                        <td >
+                            <select name="State">
+                                <option>Maharashtra</option>
+                                <option>Gujarat</option>
+                                <option>Bengal</option>
+                                <option>Rajasthan</option>
+                                <option>Punjab</option>
+                            </select>
+                        </td>
+                        <td >
+                            <select name="District">
+                                <option>Pune</option>
+                                <option>Thane</option>
+                                <option>Amravati</option>
+                                <option>Nashik</option>
+                                <option>Nagpur</option>
+                            </select>
+                        </td>
+                        <td >
+                            <select name="City">
+                                <option>Pune</option>
+                                <option>Mumbai</option>
+                                <option>Aurangabad</option>
+                                <option>Nagpur</option>
+                                <option>Solapur</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>State</td>
+                        <td>District</td>
+                        <td>City</td>
+                    </tr>
+                   </table>
+                   <table>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>
+                            <input type="radio" name="gender" />F
+                            <input type="radio" name="gender"/>M
+                            <input type="radio"  name="gender"/>O
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Upload Photo</td>
+                        <td>
+                            <input type="file" placeholder="Browse Your Photo" title="upload photo" name="photo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Select your Course</td>
+                        <td>
+                            <select name="course" id="course">
+                                <option >DAC</option>
+                                <option >DBDA</option>
+                                <option >DMC</option>
+                                <option >DESD</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" class="button" value="Register"  name="Register"></td>
+                        <td><input type="reset"  class="button"  value="Clear"  name="Clear" ></td>
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+    </div>
+    <div></div>
+</body>
+</html>

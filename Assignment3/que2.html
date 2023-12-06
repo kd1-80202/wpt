@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-left: 500px;
+            flex-direction: column;
+            height: 100px;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px ;
+            background-color: white;
+            color: black;
+        }
+
+        header h1 {
+            margin-right: 500px ;
+            text-decoration: underline;
+        }
+
+        
+
+      
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 800px;
+            background-color: peachpuff;
+            border-radius: 8px;
+            box-shadow:  10px black;
+        }
+
+        .video {
+        margin: 20px;
+        }
+
+        .form {
+            flex: 1;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            
+        }
+
+        td {
+            
+            padding: 8px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><u>Registration Form</u></h1>
+    </header>
+    <div class="container">
+        <div class="video">
+            <video width="320" height="240" controls>
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.webm" type="video/webm">
+            </video>
+        </div>
+        <div class="form">
+            <form action="server.jsp" method="post">
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" required="required" name="MyName" placeholder="Name" />*</td>
+                    </tr>
+                    <tr>
+                        <td>Birth Date:</td>
+                        <td><input type="date" name="myDOB" required="required" />*</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" name="MyEmail" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9]+$"
+                                placeholder="Email" /></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" name="password"
+                                pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g" /></td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td>
+                            <select name="state">
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Gujarat">Gujarat</option>
+                            </select>
+                            <select name="City">
+                                <option value="Solapur">Solapur</option>
+                                <option value="Surat">Surat</option>
+                            </select>
+                            <select name="District">
+                                <option value="Solapur">Solapur</option>
+                                <option value="Surat">Surat</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Upload photo</td>
+                        <td><input type="file" name="profilePhoto" accept="image/*" /></td>
+                    </tr>
+                    <tr>
+                        <td>Select course:</td>
+                        <td>
+                            <select name="course">
+                                <option value="Java">Java</option>
+                                <option value="Python">Python</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" name="btnRegister" value="Register" />
+                            <input type="reset" value="Clear" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
